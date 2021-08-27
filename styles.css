@@ -1,1 +1,35 @@
+#ozel_sag_tiklama_sag_click_acilan_menu {
+    margin: 0;
+    padding: 8px 10px;
+    position: fixed;
+    z-index: 1000000;
+    background-color: rgb(36, 36, 36);
+    height: auto;
+    transform: scale(0);
+    transform-origin:top left;
+}
 
+#ozel_sag_tiklama_sag_click_acilan_menu.active {
+    transform: scale(1);
+    transition:transform 300ms ease-in-out;
+}
+
+.ozel_sag_tiklama_sag_click_acilan_menunun_kodları_kodlar {
+    padding: 8px 10px;
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+.ozel_sag_tiklama_sag_click_acilan_menunun_kodları_kodlar:hover {
+    background-color: #555;
+}
+
+.ozel_sag_tiklama_sag_click_acilan_menunun_kodları_kodlar span {
+    margin-right: 10px;
+    cursor: default;
+}
+
+#ozel_sag_tiklama_sag_click_acilan_menu a {
+    text-decoration: none;
+    color: whitesmoke;
+}
