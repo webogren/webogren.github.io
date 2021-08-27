@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+}
+
+#testler_ana {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: large;
+}
+
+#testler_ana a {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 2px;
+}
+
+#testler_ana a:hover {
+    background-color: rgb(1, 102, 1);
+}
+
+#testler_ana li, ul {
+    list-style-type: none;
+    margin: 5px;
+}
+
+#ozel_sag_tiklama_sag_click_acilan_menu {
+    margin: 0;
+    padding: 8px 10px;
+    position: fixed;
+    z-index: 1000000;
+    background-color: rgb(36, 36, 36);
+    height: auto;
+    transform: scale(0);
+    transform-origin:top left;
+}
+
+#ozel_sag_tiklama_sag_click_acilan_menu.active {
+    transform: scale(1);
+    transition:transform 300ms ease-in-out;
+}
+
+.ozel_sag_tiklama_sag_click_acilan_menunun_kodları_kodlar {
+    padding: 8px 10px;
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+.ozel_sag_tiklama_sag_click_acilan_menunun_kodları_kodlar:hover {
+    background-color: #555;
+}
+
+.ozel_sag_tiklama_sag_click_acilan_menunun_kodları_kodlar span {
+    margin-right: 10px;
+    cursor: default;
+}
+
+#ozel_sag_tiklama_sag_click_acilan_menu a {
+    text-decoration: none;
+    color: whitesmoke;
+}
