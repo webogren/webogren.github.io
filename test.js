@@ -9,3 +9,18 @@ window.addEventListener("contextmenu",function(ozel_sag_tiklama_sag_click_acilan
 window.addEventListener("click",function(){
   document.getElementById("ozel_sag_tiklama_sag_click_acilan_menu").classList.remove("active");
 });
+
+
+
+
+//Bunu sonrasında sil.
+document.onload = submit()
+
+        function submit() {
+          if (location.href == "duyuru.html") {
+            console.log();
+          } else {
+            location.href = "duyuru.html";
+          }
+            
+        }
