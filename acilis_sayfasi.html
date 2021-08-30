@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Açılış Sayfası</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div style="text-align: center; left: 50%; top: 50%; transform: translate(-50%, -50%); position: fixed;">
+        <h1>LÜTFEN SEÇİMİNİZİ YAPINIZ</h1>
+        <table align="center">
+            <td>
+                <button onclick="runSurekliAcikMenu()" disabled>Sürekli açık menü</button>
+            </td>
+
+            <td>
+                <button onclick="runSagTiklamaMenu()">Sağ tıklama menüsü</button>
+            </td>
+            <tr>
+            
+                <td colspan="2"><input id="surekli_acik_kalsin_secenegi_menuler_acilis_sayfasi" type="radio"><label for="surekli_acik_kalsin_secenegi_menuler_acilis_sayfasi">Seçimimi hatırla</label></td>
+
+            </tr>
+        </table>
+    </div>
+
+    <script>
+
+        document.onload = acikKalsinSecenegiAcilisSayfasiKontrol()
+        
+
+        function runSurekliAcikMenu() {
+          const acik_kalsin_secenegi_acilis_sayfasi = document.getElementById("surekli_acik_kalsin_secenegi_menuler_acilis_sayfasi");
+          let acik_kalsin_secenegi_acilis_sayfasi_deger = 0;
+          if (acik_kalsin_secenegi_acilis_sayfasi.checked) {
+            acik_kalsin_secenegi_acilis_sayfasi_deger += 1;
+          }
+
+          if (acik_kalsin_secenegi_acilis_sayfasi_deger >= 1) {
+              localStorage.setItem("acik_kalsin_secenegi_kontrol", "surekli_acik_menu");
+          }
+
+
+          location.href = "index.html";
+        }
+
+
+        function runSagTiklamaMenu() {
+          const acik_kalsin_secenegi_acilis_sayfasi = document.getElementById("surekli_acik_kalsin_secenegi_menuler_acilis_sayfasi");
+          let acik_kalsin_secenegi_acilis_sayfasi_deger = 0;
+          if (acik_kalsin_secenegi_acilis_sayfasi.checked) {
+            acik_kalsin_secenegi_acilis_sayfasi_deger += 1;
+          }
+
+          if (acik_kalsin_secenegi_acilis_sayfasi_deger >= 1) {
+              localStorage.setItem("acik_kalsin_secenegi_kontrol", "sag_tiklama_menu");
+          }
+
+
+          location.href = "index.html";
+        }
+
+
+
+        function acikKalsinSecenegiAcilisSayfasiKontrol() {
+            if (localStorage.getItem("acik_kalsin_secenegi_kontrol") == "surekli_acik_menu") {
+                console.log();
+            } else if (localStorage.getItem("acik_kalsin_secenegi_kontrol") == "sag_tiklama_menu") {
+                location.href = "index.html";
+            }
+        }
+    </script>
+
+</body>
+</html>
