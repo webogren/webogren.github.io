@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="test.css">
+    <title>1. Test</title>
+</head>
+<body>
+    <table>
+        <td><img src=""></td>
+        
+        <td> 
+            <div class="test">
+                <h1 style="text-align: center;">TEST BAŞLIĞI</h1>
+                <div class="testler">
+                    <fieldset>
+                        <legend>Soru 1</legend>
+                        <label>Aşağıdakilerden hangisi ... ?</label><br><br>
+                        <input id="s1_a" type="radio" name="soru_1"><label for="s1_a">A) </label><br>
+                        <input id="s1_b" type="radio" name="soru_1"><label for="s1_b">B) </label><br>
+                        <input id="s1_c" type="radio" name="soru_1"><label for="s1_c">C) </label><br>
+                        <input id="s1_d" type="radio" name="soru_1"><label for="s1_d">D) </label><br>
+                        <input id="s1_e" type="radio" name="soru_1"><label for="s1_e">E) </label><br>
+                    </fieldset><br>
+                    
+                    <fieldset>
+                        <legend>Soru 2</legend>
+                        <label>Aşağıdakilerden hangisi ... ?</label><br>
+                        <input id="s2_a" type="radio" name="soru_2"><label for="s2_a">A) </label><br>
+                        <input id="s2_b" type="radio" name="soru_2"><label for="s2_b">B) </label><br>
+                        <input id="s2_c" type="radio" name="soru_2"><label for="s2_c">C) </label><br>
+                        <input id="s2_d" type="radio" name="soru_2"><label for="s2_d">D) </label><br>
+                        <input id="s2_e" type="radio" name="soru_2"><label for="s2_e">E) </label><br>
+                    </fieldset><br>
+                    
+                    <fieldset>
+                        <legend>Soru 3</legend>
+                        <label>Aşağıdakilerden hangisi ... ?</label><br>
+                        <input id="s3_a" type="radio" name="soru_3"><label for="s3_a">A) </label><br>
+                        <input id="s3_b" type="radio" name="soru_3"><label for="s3_b">B) </label><br>
+                        <input id="s3_c" type="radio" name="soru_3"><label for="s3_c">C) </label><br>
+                        <input id="s3_d" type="radio" name="soru_3"><label for="s3_d">D) </label><br>
+                        <input id="s3_e" type="radio" name="soru_3"><label for="s3_e">E) </label><br>
+                    </fieldset><br>
+                    
+                    <fieldset>
+                        <legend>Soru 4</legend>
+                        <label>Aşağıdakilerden hangisi ... ?</label><br>
+                        <input id="s4_a" type="radio" name="soru_4"><label for="s4_a">A) </label><br>
+                        <input id="s4_b" type="radio" name="soru_4"><label for="s4_b">B) </label><br>
+                        <input id="s4_c" type="radio" name="soru_4"><label for="s4_c">C) </label><br>
+                        <input id="s4_d" type="radio" name="soru_4"><label for="s4_d">D) </label><br>
+                        <input id="s4_e" type="radio" name="soru_4"><label for="s4_e">E) </label><br>
+                    </fieldset><br>
+                    
+                    <fieldset>
+                        <legend>Soru 5</legend>
+                        <label>Aşağıdakilerden hangisi ... ?</label><br>
+                        <input id="s5_a" type="radio" name="soru_5"><label for="s5_a">A) </label><br>
+                        <input id="s5_b" type="radio" name="soru_5"><label for="s5_b">B) </label><br>
+                        <input id="s5_c" type="radio" name="soru_5"><label for="s5_c">C) </label><br>
+                        <input id="s5_d" type="radio" name="soru_5"><label for="s5_d">D) </label><br>
+                        <input id="s5_e" type="radio" name="soru_5"><label for="s5_e">E) </label><br>
+                    </fieldset>
+            
+                    <br><button class="gonder_buttonu_test" onclick="dogruCevapKontroluT1(5), runCheckFunction()">Gönder</button><p id="sonucT1">Sonucunuz siz cevapladıktan sonra burada gözükecektir.</p>
+                    </div>
+            </div>
+        </td>
+
+        <td><img src=""></td>
+    </table>
+
+    <script src="test.js"></script>
+    <script>
+
+        const testIsmıS = "test1"
+        
+        
+
+        function dogruCevapKontroluT1(soru_sayisi) {
+            var dogruCevapSayısıT1 = 0;
+
+            if (document.getElementById('s1_a').checked) {
+                dogruCevapSayısıT1 = dogruCevapSayısıT1 + 1;
+            } if (document.getElementById('s2_a').checked) {
+                dogruCevapSayısıT1 = dogruCevapSayısıT1 + 1;
+            } if (document.getElementById('s3_a').checked) {
+                dogruCevapSayısıT1 = dogruCevapSayısıT1 + 1;
+            } if (document.getElementById('s4_a').checked) {
+                dogruCevapSayısıT1 = dogruCevapSayısıT1 + 1;
+            } if (document.getElementById('s5_a').checked) {
+                dogruCevapSayısıT1 = dogruCevapSayısıT1 + 1;
+            }
+            
+            sonucIsmı = "Toplamda " + soru_sayisi + " soru arasından " + dogruCevapSayısıT1 + " tanesine doğru, " +  (soru_sayisi - dogruCevapSayısıT1) + " tanesine de yanlış yanıt verdiniz ya da boş bıraktınız.";
+            localStorage.setItem(testIsmıS, sonucIsmı);
+            document.getElementById("sonucT1").innerHTML = localStorage.getItem(testIsmıS);
+
+        }
+
+        
+
+        document.onload = runCheckFunction();
+
+        function runCheckFunction() {
+            document.getElementById("sonucT1").innerHTML = localStorage.getItem(testIsmıS);
+        }
+    </script>
+</body>
+</html>

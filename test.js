@@ -13,8 +13,10 @@ window.addEventListener("click",function(){
 
 
 
+
+
 //Bunu sonrasında sil.
-document.onload = submit()
+/* document.onload = submit()
 
         function submit() {
           if (location.href == "duyuru.html") {
@@ -23,4 +25,4 @@ document.onload = submit()
             location.href = "duyuru.html";
           }
             
-        }
+        } */

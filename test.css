@@ -60,3 +60,27 @@ body {
     text-decoration: none;
     color: whitesmoke;
 }
+
+
+.test {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.gonder_buttonu_test {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 1vh;
+    font-size: 5vh;
+}
+
+.gonder_buttonu_test:hover {
+    background-color: rgb(236, 4, 4);
+}
